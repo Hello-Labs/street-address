@@ -3,10 +3,6 @@ $LOAD_PATH.unshift 'lib'
 require 'street_address'
 
 Gem::Specification.new do |s|
-  if s.respond_to?(:metadata)
-    s.metadata["allowed_push_host"] = "https://rubygems.pkg.github.com/Hello-Labs/"
-  end
-
   s.name = "street-address"
   s.licenses = ['MIT']
   s.version = StreetAddress::US::VERSION
@@ -23,6 +19,14 @@ StreetAddress::US allows you to send any string to parse and if the string is a 
 
 A port of Geo::StreetAddress::US by Schuyler D. Erle and Tim Bunce.
 desc
+
+  s.metadata["allowed_push_host"] = "https://rubygems.pkg.github.com/Hello-Labs/"
+
+  # Specify which files should be added to the gem when it is released.
+  # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
+  s.files = Dir.chdir(File.expand_path('..', __FILE__)) do
+    `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
+  end
 
   s.add_development_dependency "bundler"
   s.add_development_dependency "rake"
