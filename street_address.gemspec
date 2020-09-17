@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
     s.metadata["allowed_push_host"] = "https://rubygems.pkg.github.com/Hello-Labs/"
   end
 
-  s.name = "StreetAddress"
+  s.name = "street-address"
   s.licenses = ['MIT']
   s.version = StreetAddress::US::VERSION
   s.date = Time.now.strftime('%Y-%m-%d')
