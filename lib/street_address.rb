@@ -1,6 +1,6 @@
 module StreetAddress
   class US
-    VERSION = '2.0.0'
+    VERSION = '2.0.1'
 
     DIRECTIONAL = {
       "north" => "N",
@@ -262,6 +262,7 @@ module StreetAddress
       'plaza' => "plz",
       'plza'  => "plz",
       'point' => "pt",
+      'pointe' => "pt",
       'points'=> "pts",
       'port'  => "prt",
       'ports' => "prts",

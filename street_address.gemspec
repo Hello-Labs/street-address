@@ -3,6 +3,10 @@ $LOAD_PATH.unshift 'lib'
 require 'street_address'
 
 Gem::Specification.new do |s|
+  if s.respond_to?(:metadata)
+    s.metadata["allowed_push_host"] = "https://rubygems.pkg.github.com/Hello-Labs/"
+  end
+
   s.name = "StreetAddress"
   s.licenses = ['MIT']
   s.version = StreetAddress::US::VERSION
